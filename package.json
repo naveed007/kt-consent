@@ -1,0 +1,58 @@
+{
+  "name": "@naveed007/kt-consnet",
+  "version": "0.0.1",
+  "description": "kt consnet",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "all": "npm run lint && npm run format-check && npm run test && npm run build && npm run docs",
+    "build": "tsc -p .",
+    "format": "prettier --write \"**/*.{ts,tsx,yml,yaml}\"",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest --runInBand --passWithNoTests",
+    "docs": "typedoc --githubPages true --excludeExternals --excludeInternal src/index.ts"
+  },
+  "browser": {
+    "path": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveed007/kt-consent.git"
+  },
+  "homepage": "https://github.com/naveed007/kt-consent.",
+  "bugs": {
+    "url": "https://github.com/naveed007/kt-consent/issues"
+  },
+  "keywords": [
+    "consent",
+    "cookie"
+  ],
+  "author": "naveed007",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-junit": "^16.0.0",
+    "prettier": "^2.8.7",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.2",
+    "typedoc": "^0.24.4",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "tslib": "^2.5.0"
+  },
+  "files": [
+    "./dist/"
+  ]
+}
